@@ -3,6 +3,8 @@ export type User = {
     lastName: string
     email: string
     handle: string
+    _id: string
+    description: string
 }
 
 export type RegisterCredencials = Pick<User, 'name' | 'lastName' | 'email' | 'handle' > & {
@@ -13,4 +15,8 @@ export type RegisterCredencials = Pick<User, 'name' | 'lastName' | 'email' | 'ha
 export type LoginCredentials = Pick<User, 'email'> & {
     email: string
     password: string
+}
+
+export type ProfileForm = Pick<User, 'handle' | 'description'> & {
+    
 }
